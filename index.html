@@ -18,7 +18,7 @@
     document.head.appendChild(s);
   </script>
 
-  <!-- Google reCAPTCHA -->
+  <!-- Google Invisible reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- CSS Styles -->
@@ -68,9 +68,15 @@
     <b>This CDN is work in progress.</b>
     <marquee>JS files will be added.</marquee>
 
-    <!-- Google reCAPTCHA widget -->
-    <div class="g-recaptcha" data-sitekey="6Ld4SQ4sAAAAAJ9Bf0rr_Qa8UkUDiz9Y2LfCg2Lq"></div>
+    <!-- Invisible reCAPTCHA widget -->
+    <div class="g-recaptcha"
+         data-sitekey="6Ld4SQ4sAAAAAJ9Bf0rr_Qa8UkUDiz9Y2LfCg2Lq"
+         data-size="invisible"
+         data-badge="bottomright">
+    </div>
   </div>
+
+  <!-- Optional: Button to trigger reCAPTCHA manually -->
+  <button onclick="grecaptcha.execute()" style="margin-top:20px;">Verify</button>
 </body>
 </html>
-
