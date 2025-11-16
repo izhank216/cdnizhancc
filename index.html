@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="counter.js"></script>
-<script>
-  const s = document.createElement('script');
-  s.src = "https://cdn.counter.dev/script.js";
-  s.setAttribute('data-id', COUNTER_ID);
-  s.async = true;
-  document.head.appendChild(s);
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cdn.izhan.cc</title>
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Counter.dev script -->
+  <script src="counter.js"></script>
+  <script>
+    const s = document.createElement('script');
+    s.src = "https://cdn.counter.dev/script.js";
+    s.setAttribute('data-id', COUNTER_ID);
+    s.async = true;
+    document.head.appendChild(s);
+  </script>
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- CSS Styles -->
   <style>
@@ -44,13 +48,17 @@
       color: #555;
     }
 
-    /* Optional: add a subtle box around the content */
     .container {
       background-color: #fff;
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       display: inline-block;
+    }
+
+    /* reCAPTCHA styling */
+    .g-recaptcha {
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -59,6 +67,10 @@
     <h2>Welcome to cdn.izhan.cc!</h2>
     <b>This CDN is work in progress.</b>
     <marquee>JS files will be added.</marquee>
+
+    <!-- Google reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6Ld4SQ4sAAAAAJ9Bf0rr_Qa8UkUDiz9Y2LfCg2Lq"></div>
   </div>
 </body>
 </html>
+
